@@ -12,6 +12,7 @@ Example [user-given prompts are Wily, coyote, and desert and various sentences a
 - integrates with GPU's easily
  - it is up to you how divergent or consistent with your prompts the story is (by adjusting temperature)
  - you can determine when the story ends, if it ends at all
+  - exceedingly simple to operate [Evaluate> Evaluate notebook]
 
 Uses GPT-2 neural net from its repository to procedurally generate random new worlds to explore via text.
 
