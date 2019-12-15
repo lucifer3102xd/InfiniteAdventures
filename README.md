@@ -12,7 +12,7 @@ Example 1 [user prompts are in italics]: "Your name is *Lance*. You are a *detec
 - integrates with GPU's easily
  - super speedy
  - it is up to you how divergent or consistent with your prompts the story is (by adjusting temperature)
- - you can determine when the story ends, if it ends at all
+ - you can determine when the story ends, if it ends at all (by adjusting character length of story)
  - exceedingly simple to operate [Evaluate> Evaluate notebook]
 
 Uses GPT-2 neural net from its repository to procedurally generate random new worlds to explore via text.
