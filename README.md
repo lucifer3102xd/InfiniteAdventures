@@ -16,4 +16,4 @@ Example "Your name is Lance. You are a detective in the land of Calgary. Your jo
 
 Uses GPT-2 neural net from its repository to procedurally generate random new worlds to explore via text.
 
-Coded in Mathematica.
+Coded in Mathematica. You may be able to access Mathematica through your university or by free download (time-limited). There is also a reasonable Home edition that you can use here.
