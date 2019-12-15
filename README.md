@@ -4,7 +4,7 @@ Randomly generated coherent text adventures via GPT-2
 
 Nothing limits you in the story.
 
-Example [user-given prompts are Wily, coyote, and desert and various sentences along the way]: "... Your name is Wily. You are a coyote in the land of the desert. You wonder what is going on. You write about my brush-retrieval camp. You say insulting things about my entourage. You fight. With a sword. Your face is black. You wonder what to do next. You are an alkyoid courier staking out another dear friend who will quell galactic turmoil. You write about my abandoned forest oasis. You dispute. With that gun it is yours...."
+Example "Your name is Lance. You are a detective in the land of Calgary. Your job is to protect the city of Calgary. You will be found guilty of following the law. You are not afraid of repercussions for following the law. You will have to live with your conscience. Don't worry about who you are. You walk proudly through the streets. But your conscience can't alter your name. The Moon is a special symbol. You wonder what your name means. Don't let the name fool you. It's all yours. You go to the local saloon. You pay a fine and will be sent home. It's all up to you. You can change it. You've earned enough. You ask what the fine is for. It's not worth the money. Then you go to the nearest grocery store. The store sells everything and the prices are good. You buy some bananas. You make a purchase on your way home. You check on your Mom for anything. The store is full. You buy some chocolate milk."
 
 - very lightweight (22 lines of sloppy code total)
 - private
