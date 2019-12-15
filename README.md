@@ -1,3 +1,5 @@
+[InfiniteAdventures Logo](https://i.imgur.com/9FQ1FbN.png)
+
 # InfiniteAdventures
 AI generated coherent text adventures via GPT-2 and Mathematica that you can interact with.
 
