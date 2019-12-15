@@ -14,7 +14,7 @@ Nothing limits you in the story.
  - super speedy
  - it is up to you how divergent or consistent with your prompts the story is (by adjusting temperature)
  - you can determine when the story ends, if it ends at all (by adjusting character length of story)
- - exceedingly simple to operate [Evaluate> Evaluate notebook]
+ - exceedingly simple to operate [Evaluation> Evaluate notebook]
 
 Uses GPT-2 neural net from its repository to procedurally generate random new worlds to explore via text.
 
