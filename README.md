@@ -1,3 +1,4 @@
+![logo](https://github.com/renayo/InfiniteAdventures/raw/master/InfiniteAdventures%20logo1.png "logo")
 
 
 # InfiniteAdventures
