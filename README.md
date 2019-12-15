@@ -1,5 +1,5 @@
 # InfiniteAdventures
-Randomly generated coherent text adventures via GPT-2
+Randomly generated coherent text adventures via GPT-2 and Mathematica.
 
 
 Nothing limits you in the story.
