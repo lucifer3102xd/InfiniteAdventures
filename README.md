@@ -10,6 +10,7 @@ Example [user prompts are in italics]: "Your name is *Lance*. You are a *detecti
 - private
 - as persistant as you want it to be (by adjusting tokens)
 - integrates with GPU's easily
+ - super speedy
  - it is up to you how divergent or consistent with your prompts the story is (by adjusting temperature)
  - you can determine when the story ends, if it ends at all
  - exceedingly simple to operate [Evaluate> Evaluate notebook]
