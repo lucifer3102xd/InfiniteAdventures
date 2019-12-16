@@ -10,28 +10,31 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       161,          7]
-NotebookDataLength[     15980,        308]
-NotebookOptionsPosition[     15454,        291]
-NotebookOutlinePosition[     15840,        308]
-CellTagsIndexPosition[     15797,        305]
+NotebookDataLength[     16759,        328]
+NotebookOptionsPosition[     16094,        308]
+NotebookOutlinePosition[     16481,        325]
+CellTagsIndexPosition[     16438,        322]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
 Cell[BoxData[{
  RowBox[{
   RowBox[{"lm", "=", 
    RowBox[{"NetModel", "[", 
     RowBox[{"{", 
      RowBox[{"\"\<GPT-2 Transformer Trained on WebText Data\>\"", ",", 
-      RowBox[{"\"\<Task\>\"", "\[Rule]", "\"\<LanguageModeling\>\""}]}], 
-     "}"}], "]"}]}], ";"}], "\n", 
+      RowBox[{"\"\<Task\>\"", "\[Rule]", "\"\<LanguageModeling\>\""}], ",", 
+      RowBox[{"\"\<Size\>\"", "\[Rule]", "\"\<345M\>\""}]}], "}"}], "]"}]}], 
+  ";"}], "\n", 
  RowBox[{
   RowBox[{
    RowBox[{
     RowBox[{"generateSample", "[", "languagemodel_", "]"}], "[", 
     RowBox[{"input_String", ",", 
-     RowBox[{"numTokens_:", " ", "300"}], ",", 
+     RowBox[{"numTokens_:", " ", "600"}], ",", 
      RowBox[{"temperature_:", " ", "0.75"}]}], "]"}], ":=", 
    RowBox[{"Nest", "[", 
     RowBox[{
@@ -57,8 +60,20 @@ Cell[BoxData[{
   3.7853488135830536`*^9, 3.78534881647971*^9}, {3.7853505791417847`*^9, 
   3.785350636890175*^9}, {3.7853506734642324`*^9, 3.7853506744067936`*^9}, {
   3.7853515320634356`*^9, 3.785351533343602*^9}, {3.7853627927685037`*^9, 
-  3.785362793336007*^9}, {3.7854193339868407`*^9, 3.7854193341730022`*^9}},
- CellLabel->"In[18]:=",ExpressionUUID->"2d8c86ab-de9a-468f-bffa-b291648a3f0b"],
+  3.785362793336007*^9}, {3.7854193339868407`*^9, 3.7854193341730022`*^9}, {
+  3.7854864421417856`*^9, 3.7854864432412853`*^9}, {3.7855201550827703`*^9, 
+  3.7855201599030485`*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"2d8c86ab-de9a-468f-bffa-b291648a3f0b"],
+
+Cell[BoxData[
+ DynamicBox[ToBoxes[
+  ResourceSystemClient`Private`$ProgressIndicatorContent, StandardForm],
+  ImageSizeCache->{900., {48., 65.}}]], "PrintTemporary",
+ CellChangeTimes->{3.7855207854467564`*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"fdb86201-5f47-4832-b458-feb089393ec6"]
+}, Open  ]],
 
 Cell[BoxData[
  RowBox[{
@@ -71,12 +86,13 @@ Cell[BoxData[
      RowBox[{
      "AskDisplay", "[", 
       "\"\<Infinite Interactive Story Generator. Game ends when a story of \
-3000 characters is generated.\>\"", "]"}], ";", "\[IndentingNewLine]", 
+3000 characters is generated. Stop any time by pressing Control + .\>\"", 
+      "]"}], ";", "\[IndentingNewLine]", 
      RowBox[{"Ask", "[", 
       RowBox[{
        RowBox[{"{", 
-        RowBox[{"\"\<name\>\"", ",", "\"\<Name your protagonist\>\""}], "}"}],
-        "\[Rule]", "\"\<String\>\""}], "]"}], ";", 
+        RowBox[{"\"\<name\>\"", ",", "\"\<Name your protagonist.\>\""}], 
+        "}"}], "\[Rule]", "\"\<String\>\""}], "]"}], ";", 
      RowBox[{"Ask", "[", 
       RowBox[{
        RowBox[{"{", 
@@ -277,8 +293,9 @@ Cell[BoxData[
    3.7853651906112366`*^9}, {3.7854190455445843`*^9, 
    3.7854191452036476`*^9}, {3.7854192059319134`*^9, 3.785419207013073*^9}, {
    3.7854192880889826`*^9, 3.785419294431774*^9}, {3.7854194447277856`*^9, 
-   3.7854194528872347`*^9}, {3.78541968246652*^9, 3.7854196834364047`*^9}},
- CellLabel->"In[20]:=",ExpressionUUID->"e4436f2c-74a0-4a7a-b9e7-735e3c98e165"],
+   3.7854194528872347`*^9}, {3.78541968246652*^9, 3.7854196834364047`*^9}, 
+   3.7854886200041885`*^9, {3.7854888450133886`*^9, 3.785488855571486*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"e4436f2c-74a0-4a7a-b9e7-735e3c98e165"],
 
 Cell[BoxData[
  RowBox[{"story", "[", "]"}]], "Input",
@@ -287,12 +304,12 @@ Cell[BoxData[
    3.7853304424237933`*^9, 3.785330443632887*^9}, 3.7853315469215665`*^9, {
    3.7853378837642365`*^9, 3.7853378839674096`*^9}, {3.785347575419318*^9, 
    3.7853475968568635`*^9}, {3.7854193423884945`*^9, 3.7854193435255327`*^9}},
- CellLabel->"In[21]:=",ExpressionUUID->"73a434ce-758e-4fbe-9b12-2bad9c268b31"]
+ CellLabel->"In[15]:=",ExpressionUUID->"73a434ce-758e-4fbe-9b12-2bad9c268b31"]
 },
-Evaluator->"B",
-WindowSize->{1233, 1041},
-WindowMargins->{{150, Automatic}, {341, Automatic}},
+WindowSize->{3840, 2077},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
 CellContext->Notebook,
+Magnification->3.,
 FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 11, 2019)",
 StyleDefinitions->"Default.nb"
 ]
@@ -307,9 +324,12 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[561, 20, 1949, 40, 67, "Input",ExpressionUUID->"2d8c86ab-de9a-468f-bffa-b291648a3f0b"],
-Cell[2513, 62, 12424, 218, 428, "Input",ExpressionUUID->"e4436f2c-74a0-4a7a-b9e7-735e3c98e165"],
-Cell[14940, 282, 510, 7, 61, "Input",ExpressionUUID->"73a434ce-758e-4fbe-9b12-2bad9c268b31"]
+Cell[CellGroupData[{
+Cell[583, 22, 2116, 43, 240, "Input",ExpressionUUID->"2d8c86ab-de9a-468f-bffa-b291648a3f0b"],
+Cell[2702, 67, 313, 7, 139, "PrintTemporary",ExpressionUUID->"fdb86201-5f47-4832-b458-feb089393ec6"]
+}, Open  ]],
+Cell[3030, 77, 12547, 220, 1341, "Input",ExpressionUUID->"e4436f2c-74a0-4a7a-b9e7-735e3c98e165"],
+Cell[15580, 299, 510, 7, 122, "Input",ExpressionUUID->"73a434ce-758e-4fbe-9b12-2bad9c268b31"]
 }
 ]
 *)
