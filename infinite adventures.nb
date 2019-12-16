@@ -10,16 +10,14 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       161,          7]
-NotebookDataLength[     16759,        328]
-NotebookOptionsPosition[     16094,        308]
-NotebookOutlinePosition[     16481,        325]
-CellTagsIndexPosition[     16438,        322]
+NotebookDataLength[     21193,        432]
+NotebookOptionsPosition[     20565,        414]
+NotebookOutlinePosition[     20951,        431]
+CellTagsIndexPosition[     20908,        428]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-
-Cell[CellGroupData[{
 Cell[BoxData[{
  RowBox[{
   RowBox[{"lm", "=", 
@@ -64,16 +62,6 @@ Cell[BoxData[{
   3.7854864421417856`*^9, 3.7854864432412853`*^9}, {3.7855201550827703`*^9, 
   3.7855201599030485`*^9}},
  CellLabel->"In[2]:=",ExpressionUUID->"2d8c86ab-de9a-468f-bffa-b291648a3f0b"],
-
-Cell[BoxData[
- DynamicBox[ToBoxes[
-  ResourceSystemClient`Private`$ProgressIndicatorContent, StandardForm],
-  ImageSizeCache->{900., {48., 65.}}]], "PrintTemporary",
- CellChangeTimes->{3.7855207854467564`*^9},
- CellLabel->
-  "During evaluation of \
-In[2]:=",ExpressionUUID->"fdb86201-5f47-4832-b458-feb089393ec6"]
-}, Open  ]],
 
 Cell[BoxData[
  RowBox[{
@@ -295,19 +283,137 @@ Cell[BoxData[
    3.7854192880889826`*^9, 3.785419294431774*^9}, {3.7854194447277856`*^9, 
    3.7854194528872347`*^9}, {3.78541968246652*^9, 3.7854196834364047`*^9}, 
    3.7854886200041885`*^9, {3.7854888450133886`*^9, 3.785488855571486*^9}},
- CellLabel->"In[14]:=",ExpressionUUID->"e4436f2c-74a0-4a7a-b9e7-735e3c98e165"],
+ CellLabel->"In[9]:=",ExpressionUUID->"e4436f2c-74a0-4a7a-b9e7-735e3c98e165"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"string", "=", "\"\<\>\""}], ";", 
+  RowBox[{"wholestory", "=", 
+   RowBox[{"{", "}"}]}], ";", 
+  RowBox[{"story", "=", 
+   RowBox[{"AskFunction", "[", 
+    RowBox[{
+     RowBox[{
+     "AskDisplay", "[", 
+      "\"\<Infinite Interactive Story Generator. Game ends when a story of \
+3000 characters is generated. Stop any time by pressing Alt + .\>\"", "]"}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{"Ask", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\"\<name\>\"", ",", "\"\<Name your protagonist\>\""}], "}"}],
+        "\[Rule]", "\"\<String\>\""}], "]"}], ";", 
+     RowBox[{"Ask", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<nameOfLand\>\"", ",", "\"\<Where is your character from?\>\""}], 
+        "}"}], "\[Rule]", "\"\<String\>\""}], "]"}], ";", 
+     RowBox[{"Ask", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<profession\>\"", ",", 
+         "\"\<What does your protagonist do for a living?\>\""}], "}"}], 
+       "\[Rule]", "\"\<String\>\""}], "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Ask", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<mission\>\"", ",", "\"\<What is your character's mission?\>\""}],
+         "}"}], "\[Rule]", "\"\<String\>\""}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"string", "=", 
+      RowBox[{"\"\<Your name is \>\"", "<>", 
+       RowBox[{"AskedValue", "[", "\"\<name\>\"", "]"}], "<>", 
+       "\"\<. You are a \>\"", "<>", 
+       RowBox[{"AskedValue", "[", "\"\<profession\>\"", "]"}], "<>", 
+       "\"\< in the land of \>\"", "<>", 
+       RowBox[{"AskedValue", "[", "\"\<nameOfLand\>\"", "]"}], "<>", 
+       "\"\<. \>\"", "<>", "\"\< The mission of \>\"", "<>", 
+       RowBox[{"AskedValue", "[", "\"\<name\>\"", "]"}], "<>", 
+       "\"\< is to \>\"", "<>", 
+       RowBox[{"AskedValue", "[", "\"\<mission\>\"", "]"}], "<>", 
+       "\"\<.\>\""}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"AppendTo", "[", 
+      RowBox[{"wholestory", ",", 
+       RowBox[{"TextSentences", "[", "string", "]"}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"wholestory", "=", 
+      RowBox[{"Flatten", "[", 
+       RowBox[{"wholestory", ",", "10"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"While", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"StringLength", "[", 
+         RowBox[{"StringRiffle", "[", 
+          RowBox[{"TextSentences", "[", "wholestory", "]"}], "]"}], "]"}], 
+        "\[LessEqual]", "3000"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"string", "=", 
+         RowBox[{"StringRiffle", "[", 
+          RowBox[{
+           RowBox[{"DeleteDuplicates", "[", 
+            RowBox[{"TextSentences", "[", 
+             RowBox[{
+              RowBox[{"generateSample", "[", "lm", "]"}], "[", 
+              RowBox[{
+               RowBox[{"StringRiffle", "[", 
+                RowBox[{"DeleteDuplicates", "[", 
+                 RowBox[{"Flatten", "[", "wholestory", "]"}], "]"}], "]"}], 
+               ",", "40"}], "]"}], "]"}], "]"}], "[", 
+           RowBox[{"[", 
+            RowBox[{"All", ";;", 
+             RowBox[{"-", "2"}]}], "]"}], "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"wholestory", "=", 
+         RowBox[{"DeleteDuplicates", "[", 
+          RowBox[{"Flatten", "[", 
+           RowBox[{
+            RowBox[{"TextSentences", "[", "string", "]"}], ",", "10"}], "]"}],
+           "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"temp", "=", 
+         RowBox[{"PrintTemporary", "[", 
+          RowBox[{"StringRiffle", "[", 
+           RowBox[{"DeleteDuplicates", "[", 
+            RowBox[{"Flatten", "[", "wholestory", "]"}], "]"}], "]"}], 
+          "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"Ask", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+           "\"\<response\>\"", ",", "\"\<What is your response?\>\""}], "}"}],
+           "\[Rule]", "\"\<String\>\""}], "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"NotebookDelete", "[", "temp", "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"wholestory", ",", 
+          RowBox[{"TextSentences", "[", 
+           RowBox[{"AskedValue", "[", "\"\<response\>\"", "]"}], "]"}]}], 
+         "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"wholestory", "=", 
+         RowBox[{"DeleteDuplicates", "[", 
+          RowBox[{"Flatten", "[", 
+           RowBox[{"wholestory", ",", "10"}], "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Ask", "[", "\"\<response\>\"", "]"}], "=."}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"NotebookDelete", "[", "temp", "]"}], ";", 
+        RowBox[{"Print", "[", "\"\<\>\"", "]"}]}]}], "\[IndentingNewLine]", 
+      "]"}], ";"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.7855222201824694`*^9, 3.785522223778225*^9}, {
+  3.7855222815871687`*^9, 3.7855222817262945`*^9}, {3.785522523266082*^9, 
+  3.7855225238349113`*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"58075824-e81d-4211-aac8-12a710160180"],
 
 Cell[BoxData[
  RowBox[{"story", "[", "]"}]], "Input",
- CellChangeTimes->{{3.7853230637837048`*^9, 3.785323064234098*^9}, {
-   3.7853231577928276`*^9, 3.7853231601709957`*^9}, 3.7853286903443713`*^9, {
-   3.7853304424237933`*^9, 3.785330443632887*^9}, 3.7853315469215665`*^9, {
-   3.7853378837642365`*^9, 3.7853378839674096`*^9}, {3.785347575419318*^9, 
-   3.7853475968568635`*^9}, {3.7854193423884945`*^9, 3.7854193435255327`*^9}},
- CellLabel->"In[15]:=",ExpressionUUID->"73a434ce-758e-4fbe-9b12-2bad9c268b31"]
+ CellChangeTimes->{{3.7855221143977733`*^9, 3.785522116729063*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"c1582a8c-208c-41ae-94c9-8001992b7191"]
 },
-WindowSize->{3840, 2077},
-WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+WindowSize->{3824, 2077},
+WindowMargins->{{-8, Automatic}, {Automatic, 0}},
 CellContext->Notebook,
 Magnification->3.,
 FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 11, 2019)",
@@ -324,12 +430,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[CellGroupData[{
-Cell[583, 22, 2116, 43, 240, "Input",ExpressionUUID->"2d8c86ab-de9a-468f-bffa-b291648a3f0b"],
-Cell[2702, 67, 313, 7, 139, "PrintTemporary",ExpressionUUID->"fdb86201-5f47-4832-b458-feb089393ec6"]
-}, Open  ]],
-Cell[3030, 77, 12547, 220, 1341, "Input",ExpressionUUID->"e4436f2c-74a0-4a7a-b9e7-735e3c98e165"],
-Cell[15580, 299, 510, 7, 122, "Input",ExpressionUUID->"73a434ce-758e-4fbe-9b12-2bad9c268b31"]
+Cell[561, 20, 2116, 43, 240, "Input",ExpressionUUID->"2d8c86ab-de9a-468f-bffa-b291648a3f0b"],
+Cell[2680, 65, 12546, 220, 1342, "Input",ExpressionUUID->"e4436f2c-74a0-4a7a-b9e7-735e3c98e165"],
+Cell[15229, 287, 5129, 120, 1342, "Input",ExpressionUUID->"58075824-e81d-4211-aac8-12a710160180"],
+Cell[20361, 409, 200, 3, 156, "Input",ExpressionUUID->"c1582a8c-208c-41ae-94c9-8001992b7191"]
 }
 ]
 *)
