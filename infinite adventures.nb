@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       161,          7]
-NotebookDataLength[      8573,        210]
-NotebookOptionsPosition[      8046,        193]
-NotebookOutlinePosition[      8432,        210]
-CellTagsIndexPosition[      8389,        207]
+NotebookDataLength[      9261,        219]
+NotebookOptionsPosition[      8733,        202]
+NotebookOutlinePosition[      9120,        219]
+CellTagsIndexPosition[      9077,        216]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -61,7 +61,7 @@ Cell[BoxData[{
   3.785362793336007*^9}, {3.7854193339868407`*^9, 3.7854193341730022`*^9}, {
   3.7854864421417856`*^9, 3.7854864432412853`*^9}, {3.7855201550827703`*^9, 
   3.7855201599030485`*^9}},
- CellLabel->"In[2]:=",ExpressionUUID->"2d8c86ab-de9a-468f-bffa-b291648a3f0b"],
+ CellLabel->"In[16]:=",ExpressionUUID->"2d8c86ab-de9a-468f-bffa-b291648a3f0b"],
 
 Cell[BoxData[
  RowBox[{
@@ -73,9 +73,10 @@ Cell[BoxData[
     RowBox[{
      RowBox[{
      "AskDisplay", "[", 
-      "\"\<Infinite Interactive Story Generator. Game ends when a story of \
-3000 characters is generated. Stop any time by pressing Alt + .\>\"", "]"}], 
-     ";", "\[IndentingNewLine]", 
+      "\"\<Infinite Adventures Interactive Story Generator. Game ends when a \
+story of 3000 characters is generated. Stop any time by pressing Alt + .. Do \
+not press enter after your response. Press submit instead.\>\"", "]"}], ";", 
+     "\[IndentingNewLine]", 
      RowBox[{"Ask", "[", 
       RowBox[{
        RowBox[{"{", 
@@ -130,20 +131,23 @@ Cell[BoxData[
        RowBox[{
         RowBox[{"string", "=", 
          RowBox[{"StringRiffle", "[", 
-          RowBox[{
-           RowBox[{"DeleteDuplicates", "[", 
-            RowBox[{"TextSentences", "[", 
-             RowBox[{
-              RowBox[{"generateSample", "[", "lm", "]"}], "[", 
+          RowBox[{"DeleteDuplicates", "[", 
+           RowBox[{"Cases", "[", 
+            RowBox[{
+             RowBox[{"Drop", "[", 
               RowBox[{
-               RowBox[{"StringRiffle", "[", 
-                RowBox[{"DeleteDuplicates", "[", 
-                 RowBox[{"Flatten", "[", "wholestory", "]"}], "]"}], "]"}], 
-               ",", "40"}], "]"}], "]"}], "]"}], "[", 
-           RowBox[{"[", 
-            RowBox[{"1", ";;", 
-             RowBox[{"-", "2"}]}], "]"}], "]"}], "]"}]}], ";", 
-        "\[IndentingNewLine]", 
+               RowBox[{"TextSentences", "[", 
+                RowBox[{
+                 RowBox[{"generateSample", "[", "lm", "]"}], "[", 
+                 RowBox[{
+                  RowBox[{"StringRiffle", "[", 
+                   RowBox[{"Cases", "[", 
+                    RowBox[{
+                    RowBox[{"DeleteDuplicates", "[", 
+                    RowBox[{"Flatten", "[", "wholestory", "]"}], "]"}], ",", 
+                    "_String"}], "]"}], "]"}], ",", "50"}], "]"}], "]"}], ",", 
+               RowBox[{"-", "1"}]}], "]"}], ",", "_String"}], "]"}], "]"}], 
+          "]"}]}], ";", "\[IndentingNewLine]", 
         RowBox[{"wholestory", "=", 
          RowBox[{"DeleteDuplicates", "[", 
           RowBox[{"Flatten", "[", 
@@ -182,17 +186,22 @@ Cell[BoxData[
       "]"}], ";"}], "]"}]}], ";"}]], "Input",
  CellChangeTimes->{{3.7855222201824694`*^9, 3.785522223778225*^9}, {
    3.7855222815871687`*^9, 3.7855222817262945`*^9}, {3.785522523266082*^9, 
-   3.7855225238349113`*^9}, 3.7855229798335524`*^9, 
-   3.785523011036743*^9},ExpressionUUID->"58075824-e81d-4211-aac8-\
-12a710160180"],
+   3.7855225238349113`*^9}, 3.7855229798335524`*^9, 3.785523011036743*^9, {
+   3.7855247205785985`*^9, 3.7855247484576674`*^9}, {3.7855255913022766`*^9, 
+   3.785525663044339*^9}, {3.785525816444154*^9, 3.785525844306589*^9}, {
+   3.7855260654529963`*^9, 3.785526112970463*^9}, {3.7855891159381337`*^9, 
+   3.785589120403661*^9}, {3.785613359431286*^9, 3.7856133750976887`*^9}, {
+   3.7856817115688486`*^9, 3.7856817123246117`*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"58075824-e81d-4211-aac8-12a710160180"],
 
 Cell[BoxData[
  RowBox[{"story", "[", "]"}]], "Input",
- CellChangeTimes->{{3.7855221143977733`*^9, 3.785522116729063*^9}},
- CellLabel->"In[22]:=",ExpressionUUID->"c1582a8c-208c-41ae-94c9-8001992b7191"]
+ CellChangeTimes->{{3.7855221143977733`*^9, 3.785522116729063*^9}, {
+  3.7855254374446163`*^9, 3.7855254395014725`*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"c1582a8c-208c-41ae-94c9-8001992b7191"]
 },
-WindowSize->{3824, 2077},
-WindowMargins->{{-8, Automatic}, {Automatic, 0}},
+WindowSize->{3840, 2077},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
 CellContext->Notebook,
 Magnification->3.,
 FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 11, 2019)",
@@ -209,9 +218,9 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[561, 20, 2116, 43, 240, "Input",ExpressionUUID->"2d8c86ab-de9a-468f-bffa-b291648a3f0b"],
-Cell[2680, 65, 5159, 121, 1304, "Input",ExpressionUUID->"58075824-e81d-4211-aac8-12a710160180"],
-Cell[7842, 188, 200, 3, 156, "Input",ExpressionUUID->"c1582a8c-208c-41ae-94c9-8001992b7191"]
+Cell[561, 20, 2117, 43, 240, "Input",ExpressionUUID->"2d8c86ab-de9a-468f-bffa-b291648a3f0b"],
+Cell[2681, 65, 5792, 129, 1690, "Input",ExpressionUUID->"58075824-e81d-4211-aac8-12a710160180"],
+Cell[8476, 196, 253, 4, 156, "Input",ExpressionUUID->"c1582a8c-208c-41ae-94c9-8001992b7191"]
 }
 ]
 *)
