@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       161,          7]
-NotebookDataLength[      9261,        219]
-NotebookOptionsPosition[      8733,        202]
-NotebookOutlinePosition[      9120,        219]
-CellTagsIndexPosition[      9077,        216]
+NotebookDataLength[      9660,        229]
+NotebookOptionsPosition[      9132,        212]
+NotebookOutlinePosition[      9519,        229]
+CellTagsIndexPosition[      9476,        226]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -61,7 +61,7 @@ Cell[BoxData[{
   3.785362793336007*^9}, {3.7854193339868407`*^9, 3.7854193341730022`*^9}, {
   3.7854864421417856`*^9, 3.7854864432412853`*^9}, {3.7855201550827703`*^9, 
   3.7855201599030485`*^9}},
- CellLabel->"In[16]:=",ExpressionUUID->"2d8c86ab-de9a-468f-bffa-b291648a3f0b"],
+ CellLabel->"In[1]:=",ExpressionUUID->"2d8c86ab-de9a-468f-bffa-b291648a3f0b"],
 
 Cell[BoxData[
  RowBox[{
@@ -86,8 +86,9 @@ not press enter after your response. Press submit instead.\>\"", "]"}], ";",
       RowBox[{
        RowBox[{"{", 
         RowBox[{
-        "\"\<nameOfLand\>\"", ",", "\"\<Where is your character from?\>\""}], 
-        "}"}], "\[Rule]", "\"\<String\>\""}], "]"}], ";", 
+        "\"\<nameOfLand\>\"", ",", 
+         "\"\<Where does your character live?\>\""}], "}"}], "\[Rule]", 
+       "\"\<String\>\""}], "]"}], ";", 
      RowBox[{"Ask", "[", 
       RowBox[{
        RowBox[{"{", 
@@ -137,15 +138,20 @@ not press enter after your response. Press submit instead.\>\"", "]"}], ";",
              RowBox[{"Drop", "[", 
               RowBox[{
                RowBox[{"TextSentences", "[", 
-                RowBox[{
-                 RowBox[{"generateSample", "[", "lm", "]"}], "[", 
+                RowBox[{"StringReplace", "[", 
                  RowBox[{
-                  RowBox[{"StringRiffle", "[", 
-                   RowBox[{"Cases", "[", 
+                  RowBox[{
+                   RowBox[{"generateSample", "[", "lm", "]"}], "[", 
+                   RowBox[{
+                    RowBox[{"StringRiffle", "[", 
+                    RowBox[{"Cases", "[", 
                     RowBox[{
                     RowBox[{"DeleteDuplicates", "[", 
                     RowBox[{"Flatten", "[", "wholestory", "]"}], "]"}], ",", 
-                    "_String"}], "]"}], "]"}], ",", "50"}], "]"}], "]"}], ",", 
+                    "_String"}], "]"}], "]"}], ",", "50"}], "]"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"\"\<//n\>\"", "\[Rule]", "\"\< \>\""}], "}"}]}], 
+                 "]"}], "]"}], ",", 
                RowBox[{"-", "1"}]}], "]"}], ",", "_String"}], "]"}], "]"}], 
           "]"}]}], ";", "\[IndentingNewLine]", 
         RowBox[{"wholestory", "=", 
@@ -183,7 +189,10 @@ not press enter after your response. Press submit instead.\>\"", "]"}], ";",
         "\[IndentingNewLine]", 
         RowBox[{"NotebookDelete", "[", "temp", "]"}], ";", 
         RowBox[{"Print", "[", "\"\<\>\"", "]"}]}]}], "\[IndentingNewLine]", 
-      "]"}], ";"}], "]"}]}], ";"}]], "Input",
+      "]"}], ";", 
+     RowBox[{"Print", "[", 
+      RowBox[{"\"\<The story has finished: \>\"", "<>", "wholestory"}], 
+      "]"}]}], "]"}]}], ";"}]], "Input",
  CellChangeTimes->{{3.7855222201824694`*^9, 3.785522223778225*^9}, {
    3.7855222815871687`*^9, 3.7855222817262945`*^9}, {3.785522523266082*^9, 
    3.7855225238349113`*^9}, 3.7855229798335524`*^9, 3.785523011036743*^9, {
@@ -191,14 +200,15 @@ not press enter after your response. Press submit instead.\>\"", "]"}], ";",
    3.785525663044339*^9}, {3.785525816444154*^9, 3.785525844306589*^9}, {
    3.7855260654529963`*^9, 3.785526112970463*^9}, {3.7855891159381337`*^9, 
    3.785589120403661*^9}, {3.785613359431286*^9, 3.7856133750976887`*^9}, {
-   3.7856817115688486`*^9, 3.7856817123246117`*^9}},
- CellLabel->"In[18]:=",ExpressionUUID->"58075824-e81d-4211-aac8-12a710160180"],
+   3.7856817115688486`*^9, 3.7856817123246117`*^9}, {3.7910228437930775`*^9, 
+   3.7910229904984074`*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"58075824-e81d-4211-aac8-12a710160180"],
 
 Cell[BoxData[
  RowBox[{"story", "[", "]"}]], "Input",
  CellChangeTimes->{{3.7855221143977733`*^9, 3.785522116729063*^9}, {
   3.7855254374446163`*^9, 3.7855254395014725`*^9}},
- CellLabel->"In[19]:=",ExpressionUUID->"c1582a8c-208c-41ae-94c9-8001992b7191"]
+ CellLabel->"In[4]:=",ExpressionUUID->"c1582a8c-208c-41ae-94c9-8001992b7191"]
 },
 WindowSize->{3840, 2077},
 WindowMargins->{{-8, Automatic}, {Automatic, -8}},
@@ -218,9 +228,9 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[561, 20, 2117, 43, 240, "Input",ExpressionUUID->"2d8c86ab-de9a-468f-bffa-b291648a3f0b"],
-Cell[2681, 65, 5792, 129, 1690, "Input",ExpressionUUID->"58075824-e81d-4211-aac8-12a710160180"],
-Cell[8476, 196, 253, 4, 156, "Input",ExpressionUUID->"c1582a8c-208c-41ae-94c9-8001992b7191"]
+Cell[561, 20, 2116, 43, 240, "Input",ExpressionUUID->"2d8c86ab-de9a-468f-bffa-b291648a3f0b"],
+Cell[2680, 65, 6193, 139, 1864, "Input",ExpressionUUID->"58075824-e81d-4211-aac8-12a710160180"],
+Cell[8876, 206, 252, 4, 123, "Input",ExpressionUUID->"c1582a8c-208c-41ae-94c9-8001992b7191"]
 }
 ]
 *)
