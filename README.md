@@ -2,7 +2,7 @@
 
 
 # InfiniteAdventures
- AI generated coherent text adventures that you can interact with via GPT-2 https://github.com/openai/gpt-2 and Mathematica https://www.wolfram.com/mathematica/ .
+Converse with someone with the internet on the tip of their tongue. AI generated coherent text adventures that you can interact with via GPT-2 https://github.com/openai/gpt-2 and Mathematica https://www.wolfram.com/mathematica/ .
 
 
 Nothing limits you in the story.
